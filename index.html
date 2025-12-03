@@ -35,6 +35,30 @@
 
       <p>- me &lt;3</p>
     </div>
+      <!-- Gift Button -->
+<div class="w-full text-center mt-6">
+<button onclick="openGift()" class="bg-pink-500 hover:bg-pink-600 text-white px-4 py-2 rounded-xl font-semibold shadow-lg">click here to claim your gift</button>
+</div>
+
+
+<!-- Popup -->
+<div id="giftPopup" class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center hidden">
+<div class="bg-white text-black p-6 rounded-2xl max-w-xs text-center shadow-xl">
+<p class="mb-4 font-semibold">Massage Spa of your choice,<br>Supplement & Zark's Burger Treat!</p>
+<button onclick="closeGift()" class="mt-2 bg-pink-500 hover:bg-pink-600 text-white px-4 py-1 rounded-lg">Close</button>
+</div>
+</div>
+
+
+<script>
+function openGift() {
+document.getElementById('giftPopup').classList.remove('hidden');
+}
+function closeGift() {
+document.getElementById('giftPopup').classList.add('hidden');
+}
+</script>
+
   </div>
   <style>
 
@@ -73,5 +97,6 @@
 
     setInterval(createHeart, 700);
   </script>
-</body>
+
+
 </html>
