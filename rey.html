@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-black text-white font-sans min-h-screen flex items-center justify-center p-4">
+  <div class="max-w-md w-full bg-zinc-900 rounded-2xl shadow-xl p-5 space-y-4">
+
+    <!-- Header -->
+    <h1 class="text-3xl font-semibold text-center mb-3">happy birthday</h1>
+
+    <!-- Image Card -->
+    <div class="bg-white p-3 shadow-md">
+      <img src="rey.jpg" alt="Birthday Photo" class=" w-full" />
+      <p class=" text-sm text-black mt-2 text-center">12.02.25</p>
+    </div>
+
+    <!-- Message (with heart outline background) -->
+    <div class="space-y-3 leading-relaxed text-sm relative p-4" style="background-image: url('heart-bg.png'); background-size: 120px; background-repeat: repeat; background-position: center; opacity: 0.95;">
+      <p>happy birthday, love!</p>
+
+      <p>I know we've been through a lot. It's been almost 5 years for us. I wasn't perfect, I am far from perfect. We both are.</p>
+
+      <p>I know it's been hard for us, now that we're both trying to fix our life together for the future we're trying to build. I know you've been into so much pressure, I'm sorry for not being so supportive the way you want me to be, I'm just so afraid you're leaving me so much behind, like how we've been for the past month.</p>
+
+      <p>I'm sorry for making you feel betrayed, but I promise you, we're gonna fix this together, I'll be more understanding and supportive.</p>
+
+      <p>I can promise you myself, just as long as you'll be mine too. I will put you first, along with your fur babies! Just promise me you'll put me first along with Ash & Sky too!</p>
+      <p>Now, I realized how important it is to always look back on our first meet, how I've always think that I found the one and my answered prayer. 
+        </p>
+      <p>I love you so much Reylan! I hope you know that. It's always you, always been you, and will always be you. Mwa!</p>
+
+      <p>- me &lt;3</p>
+    </div>
+  </div>
+  <style>
+
+    h1 {
+      font-family: mistral;
+    }
+
+    .heart {
+      position: fixed;
+      bottom: -20px;
+      animation: floatUp 6s linear infinite;
+      opacity: 0.75;
+      pointer-events: none;
+    }
+
+    @keyframes floatUp {
+      0% { transform: translateY(0) scale(1); opacity: 0.8; }
+      100% { transform: translateY(-120vh) scale(1.8); opacity: 0; }
+    }
+  </style>
+
+  <script>
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      const colors = ['#c0c0c0']; // baby pink + gray
+      heart.style.color = colors[Math.floor(Math.random() * colors.length)];
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.fontSize = (Math.random() * 20 + 20) + 'px';
+      heart.textContent = '❤';
+
+      document.body.appendChild(heart);
+
+      setTimeout(() => heart.remove(), 6000);
+    }
+
+    setInterval(createHeart, 700);
+  </script>
+</body>
+</html>
